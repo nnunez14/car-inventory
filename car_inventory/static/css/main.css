@@ -1,0 +1,53 @@
+/* Nav Styles */
+.ct-nav{
+    display: flex;
+    justify-content: center
+}
+
+/* Target Main Logo Image */
+.ct-nav img{
+    width: 25%;
+    max-width: 100%;
+    margin-left: 2vw;
+}
+
+.icon {
+    margin-top: 2.5vw;
+}
+
+ul#horizontal-list{
+    min-width: 55vw;
+    list-style: none;
+    padding-top: 2.5vw;
+}
+
+ul#horizontal-list li, ul#horizontal-list a{
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw;
+    color: black;
+}
+
+#horizontal-list a:nth-last-child(1){
+    border: 2px solid blue;
+    border-radius: 11px;
+    margin-right: 0.2vw;
+}
+
+/* End of Nav Styles */
+
+#Header-text{
+    padding: 2vw;
+}
+
+/* Start of Footer */
+.footer-text-flex{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vw;
+}
+
+#footer-logo{
+    width:100%;
+    max-width: 100%
+}
