@@ -8,10 +8,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <link rel="stylesheet" href="../static/css/main.css">
-<title>Title</title>
+<title>Vroom Vroom Enterprise</title>
 </head>
 <body>
-
     <!-- Navbar goes here -->
     <nav class="ct-nav">
         <div class="icon">
@@ -20,21 +19,27 @@
             <!-- Nav items begin here -->
             <div>
                 <ul id="horizontal-list">
-                    <a href="">
+                    <a href="{{ url_for('site.home') }}">
                         <li>Total Collection</li>
                     </a>
                     <a href="">
-                        <li>Best Cars</li>
+                        <li>Donate</li>
                     </a>
-                    <a href="">
-                        <li>Profile</li>
-                    </a>
-                    <a href="{{ url_for('auth.signin') }}">
-                        <li>Sign In</li>
-                    </a>
-                    <a href="{{ url_for('auth.signup') }}">
-                        <li>Sign Up</li>
-                    </a>
+                    {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('site.profile') }}">
+                            <li>Profile</li>
+                        </a>
+                        <a href="{{ url_for('auth.logout') }}">
+                            <li>Log Out</li>
+                        </a>
+                    {% else %}
+                        <a href="{{ url_for('auth.signin') }}">
+                            <li>Sign In</li>
+                        </a>
+                        <a href="{{ url_for('auth.signup') }}">
+                            <li>Sign Up Free</li>
+                        </a>
+                    {% endif %}
                 </ul>
             </div>
     </nav>

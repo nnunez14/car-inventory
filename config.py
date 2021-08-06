@@ -7,6 +7,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 # Allows outside files/folders to be added to the project from 
 # the base directory
 
+
 class Config:
     """
     Sets configuration variables for our Flask app here
